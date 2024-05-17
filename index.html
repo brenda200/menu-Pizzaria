@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Ordering App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/Design sem nome (1).png" alt="It's Time for Pizza">
+            <h1>Pizzaria</h1>
+            <p>(65)5353-5242</p>
+        </header>
+        <nav>
+            <button id="pizza-btn" class="nav-btn active">Pizza</button>
+            <button id="bebida-btn" class="nav-btn">Bebida</button>
+            <button id="sobremesa-btn" class="nav-btn">Sobremesas</button>
+        </nav>
+        <div id="menu" class="menu">
+            <div class="menu-section pizza-section active">
+                <h2>Pizza</h2>
+                <div class="menu-item">
+                    <img src="img/download (1).jpg" alt="Napolitana">
+                    <div class="item-details">
+                        <p>Napolitana</p>
+                        <p>R$ 40,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Napolitana', 40)">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/download.jpg" alt="Quatro queijos">
+                    <div class="item-details">
+                        <p>Quatro queijos</p>
+                        <p>R$ 60,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Quatro queijos', 60)">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/images.jpg" alt="Muçarela">
+                    <div class="item-details">
+                        <p>Muçarela</p>
+                        <p>R$ 50,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Muçarela', 50)">+</button>
+                </div>
+            </div>
+            <div class="menu-section bebida-section hidden">
+                <h2>Bebidas</h2>
+                <div class="menu-item">
+                    <img src="img/images (3).jpg" alt="Bebida 1">
+                    <div class="item-details">
+                        <p>(BÁRBARA LADÉA/EXAME.COM)</p>
+                        <p>R$ 50,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('(BÁRBARA LADÉA/EXAME.COM)', 50)">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/images (2).jpg" alt="Bebida 2">
+                    <div class="item-details">
+                        <p>DIVULGAÇÃO</p>
+                        <p>R$ 50,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('DIVULGAÇÃO', 50)">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/images (1).jpg" alt="Bebida 3">
+                    <div class="item-details">
+                        <p>DANIEL ACKER</p>
+                        <p>R$ 50,00</p>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('DANIEL ACKER', 50)">+</button>
+                </div>
+            </div>
+            <div class="menu-section sobremesa-section hidden">
+                <h2>Sobremesas</h2>
+                <!-- Add sobremesa items here -->
+            </div>
+            <div class="menu-section cart-section hidden">
+                <h2>Carrinho</h2>
+                <div id="cart-items"></div>
+                <p id="total-price"></p>
+                <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+            </div>
+        </div>
+        <footer>
+            <button id="cart-btn" class="cart-btn" onclick="showSection('cart-section')">🛒</button>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
